@@ -3,7 +3,8 @@ if(typeof(EventSource) !== "undefined") {
         withCredentials: true // adicionando suporte a cors
     });
     source.onmessage = function(event) {
-        document.getElementById("result").innerHTML += event.data + "<br>";
+        let data = JSON.parse(event.data);
+        document.getElementById("result").innerHTML += data.nome + "<br>";
     };
     source.addEventListener('teste', function(e) {
         console.warn('ok');
