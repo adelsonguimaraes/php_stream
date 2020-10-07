@@ -11,7 +11,7 @@
         $data = file_get_contents('./mock.json');
         $data = json_decode($data, true);
 
-        echo "retry: 10000\n";
+        echo "retry: 10000\n"; // controla o timeout do retry da requisição do js, depois que a conexão for encerrada
         echo "data: " . json_encode($data) . "\n\n";
         // echo "data: " . date('d/m/Y H:m:s') . "\n\n";
         $valor_atual = $data['monster'];
