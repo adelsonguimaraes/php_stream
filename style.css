@@ -17,8 +17,9 @@ body{
 }
 #msg {
     /* position: fixed; */
-    color: rgb(255, 255, 255);
+    color: rgb(155, 11, 11);
     margin: -20px 65px;
     font-weight: bold;
     font-size: 22px;
+    text-shadow:#000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px
 }
