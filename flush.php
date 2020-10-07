@@ -5,7 +5,7 @@
     header('X-Accel-Buffering: no'); // Nginx: unbuffered responses suitable for Comet and HTTP streaming applications
 
     // aumentando o tempo de execução permitido do php
-    set_time_limit( 60 ); // executa por 1 minuto e depois encerra
+    // set_time_limit( 60 ); // executa por 1 minuto e depois encerra
 
     while(true) {
         $data = file_get_contents('./mock.json');
@@ -17,7 +17,6 @@
         $valor_atual = $data['monster'];
         ob_flush (); 
         flush ();
-
         sleep(1);
     }
 ?>
